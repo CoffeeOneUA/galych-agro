@@ -182,6 +182,38 @@ export default function Dashboard() {
               <input type="text" value={content.hero.cta2} onChange={(e) => update(["hero", "cta2"], e.target.value)} />
             </div>
           </div>
+
+          <div className="field-row">
+            <div className="field">
+              <label>Показник 1 — значення</label>
+              <input type="text" value={content.stats[0]?.value || ""} onChange={(e) => update(["stats", 0, "value"], e.target.value)} />
+            </div>
+            <div className="field">
+              <label>Показник 1 — підпис</label>
+              <input type="text" value={content.stats[0]?.label || ""} onChange={(e) => update(["stats", 0, "label"], e.target.value)} />
+            </div>
+          </div>
+          <div className="field-row">
+            <div className="field">
+              <label>Показник 2 — значення</label>
+              <input type="text" value={content.stats[1]?.value || ""} onChange={(e) => update(["stats", 1, "value"], e.target.value)} />
+            </div>
+            <div className="field">
+              <label>Показник 2 — підпис</label>
+              <input type="text" value={content.stats[1]?.label || ""} onChange={(e) => update(["stats", 1, "label"], e.target.value)} />
+            </div>
+          </div>
+          <div className="field-row">
+            <div className="field">
+              <label>Показник 3 — значення</label>
+              <input type="text" value={content.stats[2]?.value || ""} onChange={(e) => update(["stats", 2, "value"], e.target.value)} />
+            </div>
+            <div className="field">
+              <label>Показник 3 — підпис</label>
+              <input type="text" value={content.stats[2]?.label || ""} onChange={(e) => update(["stats", 2, "label"], e.target.value)} />
+            </div>
+          </div>
+
           <div className="field">
             <label>Заголовок «Наша мета»</label>
             <input type="text" value={content.about.title} onChange={(e) => update(["about", "title"], e.target.value)} />
