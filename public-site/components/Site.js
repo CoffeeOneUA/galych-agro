@@ -74,7 +74,6 @@ export default function Site({ content }) {
   const [navOpen, setNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const revealRef = useReveal();
-  const adminUrl = process.env.NEXT_PUBLIC_ADMIN_URL || "";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -262,16 +261,6 @@ export default function Site({ content }) {
           </div>
           <div className="footer-bottom">
             <span>© {new Date().getFullYear()} {content.brandName}. Усі права захищено.</span>
-            {adminUrl && (
-              <a
-                href={adminUrl}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                style={{ fontSize: 11.5, opacity: 0.5, fontFamily: "var(--font-mono)" }}
-              >
-                адмін
-              </a>
-            )}
           </div>
         </div>
       </footer>
