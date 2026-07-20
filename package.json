@@ -1,0 +1,15 @@
+{
+  "name": "galych-agro",
+  "private": true,
+  "workspaces": [
+    "public-site",
+    "admin-panel"
+  ],
+  "scripts": {
+    "dev:site": "npm run dev --workspace=public-site",
+    "dev:admin": "npm run dev --workspace=admin-panel",
+    "build:site": "npm run build --workspace=public-site",
+    "build:admin": "npm run build --workspace=admin-panel",
+    "hash-password": "node scripts/hash-password.mjs"
+  }
+}
